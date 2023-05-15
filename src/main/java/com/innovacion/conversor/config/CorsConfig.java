@@ -15,10 +15,27 @@ import java.util.Arrays;
 public class CorsConfig {
 
     @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+        configuration.setAllowCredentials(true);
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+/*@Configuration
+public class CorsConfig {
+
+    @Bean
     CorsConfigurationSource corsConfigurationSource() {
 
+
+
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200", "https://benevolent-rolypoly-23a200.netlify.app"));
+        configuration.addAllowedOrigin("*");
+        //configuration.setAllowedOrigins(Arrays.asList("*"));//("http://localhost:4200", "https://benevolent-rolypoly-23a200.netlify.app"));
         configuration.setAllowedMethods(Arrays.asList("GET","POST","PATCH", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowCredentials(true);
         configuration.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
@@ -27,7 +44,7 @@ public class CorsConfig {
 
         return source;
 
-    }
+    }*/
 
     @Bean
     public FilterRegistrationBean<CorsFilter> corsFilter(){

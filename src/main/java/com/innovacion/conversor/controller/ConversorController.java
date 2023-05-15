@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("/convert")
 public class ConversorController {
@@ -20,7 +21,7 @@ public class ConversorController {
     }
 
     @PostMapping
-    public ResponseEntity<PyObject> convert(@RequestBody  ConvertRequest request){
+    public ResponseEntity<Object> convert(@RequestBody ConvertRequest request){
         return ResponseEntity.status(HttpStatus.CREATED).body(this.conversorService.convert(request));
     }
 

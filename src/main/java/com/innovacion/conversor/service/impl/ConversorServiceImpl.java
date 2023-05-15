@@ -2,6 +2,7 @@ package com.innovacion.conversor.service.impl;
 
 import com.innovacion.conversor.dto.ConvertRequest;
 import com.innovacion.conversor.service.IConversorService;
+import org.python.core.Py;
 import org.python.core.PyObject;
 import org.python.util.PythonInterpreter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -14,9 +15,8 @@ import static com.innovacion.conversor.util.PythonExecutorUtil.executePythonFunc
 public class ConversorServiceImpl implements IConversorService {
 
     @Override
-    public PyObject convert(ConvertRequest request) {
+    public byte[] convert(ConvertRequest request) {
         PythonInterpreter interpreter = new PythonInterpreter();
-
 
         String pythonCode = "import fitz as f\n" +
                 "import re\n" +
@@ -88,6 +88,10 @@ public class ConversorServiceImpl implements IConversorService {
 
         //byte[] bytes = (byte[]) requestAPy.__tojava__(byte[].class);
 
-        return response;
+        Byte[] response2 = (Byte[]) response.__tojava__(Byte[].class);
+
+        byte[] bytes = Py.tojava(response, byte[].class);
+
+        return bytes;
     }
 }

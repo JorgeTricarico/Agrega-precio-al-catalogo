@@ -6,6 +6,6 @@ import org.python.core.PyObject;
 
 public interface IConversorService {
 
-    PyObject convert(ConvertRequest request);
+    byte[] convert(ConvertRequest request);
 
 }

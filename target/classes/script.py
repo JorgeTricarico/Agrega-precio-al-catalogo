@@ -1,5 +1,13 @@
+import fitz as f
+import re
+import pandas as pd
+import math
+import io
+
+
 def convert(request):
 
+    type(request)
     excel_file = request.files["excelFile"]
     pdf_file = request.files["pdfFile"]
     ganancia = float(request.form["ganancia"])
@@ -46,4 +54,8 @@ def convert(request):
 
     print("Generando archivo PDF nuevo...")
 
-    return new_pdf_buffer
+    #return new_pdf_buffer.
+    pdf_bytes = new_pdf_buffer.getvalue()
+
+    return pdf_bytes
+

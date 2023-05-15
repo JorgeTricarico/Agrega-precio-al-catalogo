@@ -1,5 +1,8 @@
-C:\Users\pc\Desktop\conversor-pdf\conversor\src\main\java\com\innovacion\conversor\service\IConversorService.java
-C:\Users\pc\Desktop\conversor-pdf\conversor\src\main\java\com\innovacion\conversor\service\impl\ConversorServiceImpl.java
-C:\Users\pc\Desktop\conversor-pdf\conversor\src\main\java\com\innovacion\conversor\controller\ConversorController.java
-C:\Users\pc\Desktop\conversor-pdf\conversor\src\main\java\com\innovacion\conversor\config\CorsConfig.java
-C:\Users\pc\Desktop\conversor-pdf\conversor\src\main\java\com\innovacion\conversor\ConversorApplication.java
+C:\Users\Jorge\Desktop\conversor-master\src\main\java\com\innovacion\conversor\config\CorsConfig.java
+C:\Users\Jorge\Desktop\conversor-master\src\main\java\com\innovacion\conversor\ConversorApplication.java
+C:\Users\Jorge\Desktop\conversor-master\src\main\java\com\innovacion\conversor\dto\ConvertResponse.java
+C:\Users\Jorge\Desktop\conversor-master\src\main\java\com\innovacion\conversor\dto\ConvertRequest.java
+C:\Users\Jorge\Desktop\conversor-master\src\main\java\com\innovacion\conversor\service\IConversorService.java
+C:\Users\Jorge\Desktop\conversor-master\src\main\java\com\innovacion\conversor\util\PythonExecutorUtil.java
+C:\Users\Jorge\Desktop\conversor-master\src\main\java\com\innovacion\conversor\service\impl\ConversorServiceImpl.java
+C:\Users\Jorge\Desktop\conversor-master\src\main\java\com\innovacion\conversor\controller\ConversorController.java

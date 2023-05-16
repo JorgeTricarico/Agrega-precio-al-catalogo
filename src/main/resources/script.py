@@ -55,7 +55,9 @@ def convert(request):
     print("Generando archivo PDF nuevo...")
 
     #return new_pdf_buffer.
-    pdf_bytes = new_pdf_buffer.getvalue()
+    response = Response(new_pdf_buffer.getvalue(), mimetype="application/pdf")
+    response.headers.set("Content-Disposition", "attachment", filename=new_pdf_name + ".pdf")
+    return response
 
     return pdf_bytes
 
